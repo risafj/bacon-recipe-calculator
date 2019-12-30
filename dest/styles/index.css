@@ -7,13 +7,16 @@ body {
     font-size: small;
 }
 
-    a {
-        color: #616865;
-    }
+#photo-credits a {
+    color: #616865;
+    text-decoration: none;
+}
 
 #site-credits {
     font-size: small;
 }
-    a {
-        color: #212529;
-    }
+
+#site-credits a {
+    color: #212529;
+    text-decoration: none;
+}
