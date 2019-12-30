@@ -6,12 +6,16 @@ function init () {
     water: 'Distilled water',
     cure: 'Pink curing salt (Prague Powder)'
   }
+  const meatWeightInput = document.getElementById('meat-weight')
 
-  document.getElementById('meat-weight').addEventListener('keyup', function (keyboardEvent) {
-    if (keyboardEvent.keyCode === 13) { onButtonClick() }
+  meatWeightInput.addEventListener('keyup', function (keyboardEvent) {
+    if (keyboardEvent.keyCode === 13) {
+      meatWeightInput.blur()
+      onButtonClick()
+    }
   })
 
-  document.getElementById('meat-weight').addEventListener('blur', onButtonClick)
+  meatWeightInput.addEventListener('blur', onButtonClick)
 
   function onButtonClick () {
     const meatWeight = document.getElementById('meat-weight').value
