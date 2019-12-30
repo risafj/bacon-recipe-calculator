@@ -12,9 +12,13 @@ https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l
 .
 ├── README.md
 ├── dest
+│   ├── images
+│   │   └── bacon.jpg
 │   ├── index.html
-│   └── js
-│       └── script.js
+│   ├── scripts
+│   │   └── script.js
+│   └── styles
+│       └── index.css
 └── src
     └── index.pug
 ```
@@ -22,6 +26,9 @@ https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l
 ## Working with pug
 * How to convert pug code to html: `pug src --out dest -P`<br>
 The syntax is `pug <source dir> --out <target dir>`, and the `-P` flag means pretty, which makes the output html use indentation and line breaks.
+
+## Styling
+* Using bootstrap for styling. Non-bootstrap styling (such as the background color) is done using vanilla css.
 
 ## Hosted in AWS S3 bucket
 `aws s3 cp --recursive dest/ s3://<bucket-name>`<br>
