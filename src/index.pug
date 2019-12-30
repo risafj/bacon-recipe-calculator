@@ -11,8 +11,8 @@ html(lang='en-US')
       h1 Bacon Recipe Calculator
       div
         p
-          | Meat weight in grams:
-        input(id='meat-weight' type='number' min='0' oninput="validity.valid||(value='');")
+        label(for='meat-weight') Your meat weight in grams:
+        input(id='meat-weight' type='number' min='0' oninput="validity.valid||(value='');" placeholder='1000')
         | g
         p
           | Your ingredient list
