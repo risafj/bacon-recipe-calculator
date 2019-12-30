@@ -7,18 +7,19 @@ html(lang='en-US')
     // Bootstrap css
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
   body
-    h1 Bacon Recipe Calculator
-    div
-      p
-        | Meat weight in grams:
-      input(id='meat-weight' type='number' min='0' oninput="validity.valid||(value='');")
-      | g
-      p
-        | Your ingredient list
-      - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }
-      ul
-        each item, key in ingredientList
-          li(id=key)= item + ': '
+    div(class='container')
+      h1 Bacon Recipe Calculator
+      div
+        p
+          | Meat weight in grams:
+        input(id='meat-weight' type='number' min='0' oninput="validity.valid||(value='');")
+        | g
+        p
+          | Your ingredient list
+        - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }
+        ul
+          each item, key in ingredientList
+            li(id=key)= item + ': '
  
   script(src='scripts/script.js')
 
