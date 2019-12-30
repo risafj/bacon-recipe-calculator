@@ -11,14 +11,14 @@ function init () {
   meatWeightInput.addEventListener('keyup', function (keyboardEvent) {
     if (keyboardEvent.keyCode === 13) {
       meatWeightInput.blur()
-      onButtonClick()
+      onInputCompletion()
     }
   })
 
-  meatWeightInput.addEventListener('blur', onButtonClick)
+  meatWeightInput.addEventListener('blur', onInputCompletion)
 
-  function onButtonClick () {
-    const meatWeight = document.getElementById('meat-weight').value
+  function onInputCompletion () {
+    const meatWeight = meatWeightInput.value
     Object.keys(ingredientList).forEach(ingredientId => {
       displayIngredientWeight(ingredientId, meatWeight)
     })
