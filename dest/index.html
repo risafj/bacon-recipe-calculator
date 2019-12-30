@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-      <h1>Bacon Recipe Calculator</h1>
-      <div class="form-inline">
-        <label for="meat-weight">Your meat weight in grams:</label>
+    <div class="container p-4">
+      <h1 class="text-center mb-4">Bacon Recipe Calculator</h1>
+      <div class="form-inline justify-content-center">
+        <label class="mr-sm-2" for="meat-weight">Your meat weight in grams:</label>
         <div class="input-group">
           <input class="form-control" id="meat-weight" type="number" min="0" oninput="validity.valid||(value='');" placeholder="1000">
           <div class="input-group-append"><span class="input-group-text">g</span></div>
         </div>
       </div>
       <div>
-        <div class="card">
+        <div class="card mt-4">
           <div class="card-body">
-            <h3 class="card-title">Your ingredient list</h3>
+            <h3 class="card-title text-center">Ingredient List</h3>
             <div class="table-responsive">
               <table class="table">
                 <thead>
