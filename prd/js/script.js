@@ -19,6 +19,8 @@ function init () {
 
   function onInputCompletion () {
     const meatWeight = meatWeightInput.value
+    if (!meatWeight || Number(meatWeight) === 0) { return }
+
     Object.keys(ingredientList).forEach(ingredientId => {
       displayIngredientWeight(ingredientId, meatWeight)
     })
