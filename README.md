@@ -20,9 +20,9 @@ https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l
 ```
 
 ## Working with pug
-* How to convert pug code to html: `pug src --out prd -P`<br>
+* How to convert pug code to html: `pug src --out dest -P`<br>
 The syntax is `pug <source dir> --out <target dir>`, and the `-P` flag means pretty, which makes the output html use indentation and line breaks.
 
 ## Hosted in AWS S3 bucket
 `aws s3 cp --recursive prd/ s3://<bucket-name>`<br>
-Note: Only copy the files in `prd/` to S3.
+Note: Only copy the files in `dest/` to S3.
