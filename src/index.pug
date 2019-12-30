@@ -16,12 +16,20 @@ html(lang='en-US')
           div(class='input-group-append')
             span(class='input-group-text') g
       div
-        | Your ingredient list
-      - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }
-        ul
-          each item, key in ingredientList
-            li(id=key)= item + ': '
- 
+        p Ingredient list
+        div(class='table-responsive')
+          table(class='table')
+            thead
+              tr
+                th Ingredient name
+                th Amount (g)
+            tbody
+              - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }
+              each item, key in ingredientList
+                tr(id=`${key}-row`)
+                  td(id=`${key}-label`)=item
+                  td(id=`${key}-amount`) 
+
   script(src='scripts/script.js')
 
   

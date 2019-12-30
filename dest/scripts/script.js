@@ -28,7 +28,7 @@ function init () {
 
   function displayIngredientWeight (ingredientId, meatWeight) {
     const ingredientInGrams = calculateIngredientWeight(ingredientId, meatWeight)
-    document.getElementById(ingredientId).textContent = `${ingredientList[ingredientId]}: ${ingredientInGrams}g`
+    document.getElementById(`${ingredientId}-amount`).textContent = ingredientInGrams
   }
 
   function calculateIngredientWeight (ingredientId, meatWeight) {

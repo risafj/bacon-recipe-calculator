@@ -17,14 +17,41 @@
           <div class="input-group-append"><span class="input-group-text">g</span></div>
         </div>
       </div>
-      <div>Your ingredient list</div>
-      <ul>
-        <li id="salt">Kosher salt: </li>
-        <li id="pepper">Coarsely ground black pepper: </li>
-        <li id="sugar">Brown sugar: </li>
-        <li id="water">Distilled water: </li>
-        <li id="cure">Pink curing salt (Prague Powder): </li>
-      </ul>
+      <div>
+        <p>Your ingredient list</p>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Ingredient name</th>
+                <th>Amount (g)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="salt-row">
+                <td id="salt-label">Kosher salt</td>
+                <td id="salt-amount"> </td>
+              </tr>
+              <tr id="pepper-row">
+                <td id="pepper-label">Coarsely ground black pepper</td>
+                <td id="pepper-amount"> </td>
+              </tr>
+              <tr id="sugar-row">
+                <td id="sugar-label">Brown sugar</td>
+                <td id="sugar-amount"> </td>
+              </tr>
+              <tr id="water-row">
+                <td id="water-label">Distilled water</td>
+                <td id="water-amount"> </td>
+              </tr>
+              <tr id="cure-row">
+                <td id="cure-label">Pink curing salt (Prague Powder)</td>
+                <td id="cure-amount"> </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </body>
   <script src="scripts/script.js"></script>
