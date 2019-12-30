@@ -21,12 +21,12 @@ html(lang='en-US')
       div
         div(class='card mt-4')
           div(class='card-body')
-            h3(class='card-title text-center') Ingredient List
+            h3(class='card-title text-center') Ingredients
             div(class='table-responsive')
               table(class='table')
                 thead
                   tr
-                    th Ingredient name
+                    th Item
                     th Amount (g)
                 tbody
                   - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }
@@ -35,9 +35,9 @@ html(lang='en-US')
                       td(id=`${key}-label`)=item
                       td(id=`${key}-amount`)
       p(class='mt-4')
-        | This calculator is based on the recipe introduced by the Binging with Babish blog, which can be found #[a(href='https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l' target='_blank') here].
+        | This calculator is based on the homemade bacon recipe by the Binging with Babish blog.
         br
-        | Refer to the recipe for cooking instructions.
+        | Refer to the #[a(href='https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l' target='_blank') recipe] for cooking instructions.
       p(class='mt-4' id='photo-credits')
         | Photo by #[a(href='https://unsplash.com/@c4s3y_d3vi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText' target='_blank' id='photographer-name') Casey DeViese] on Unsplash
   script(src='scripts/script.js')
