@@ -10,19 +10,21 @@
   <body>
     <div class="container">
       <h1>Bacon Recipe Calculator</h1>
-      <div>
-        <p></p>
+      <div class="form-inline">
         <label for="meat-weight">Your meat weight in grams:</label>
-        <input id="meat-weight" type="number" min="0" oninput="validity.valid||(value='');" placeholder="1000">g
-        <p>Your ingredient list</p>
-        <ul>
-          <li id="salt">Kosher salt: </li>
-          <li id="pepper">Coarsely ground black pepper: </li>
-          <li id="sugar">Brown sugar: </li>
-          <li id="water">Distilled water: </li>
-          <li id="cure">Pink curing salt (Prague Powder): </li>
-        </ul>
+        <div class="input-group">
+          <input class="form-control" id="meat-weight" type="number" min="0" oninput="validity.valid||(value='');" placeholder="1000">
+          <div class="input-group-append"><span class="input-group-text">g</span></div>
+        </div>
       </div>
+      <div>Your ingredient list</div>
+      <ul>
+        <li id="salt">Kosher salt: </li>
+        <li id="pepper">Coarsely ground black pepper: </li>
+        <li id="sugar">Brown sugar: </li>
+        <li id="water">Distilled water: </li>
+        <li id="cure">Pink curing salt (Prague Powder): </li>
+      </ul>
     </div>
   </body>
   <script src="scripts/script.js"></script>
