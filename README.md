@@ -11,7 +11,7 @@ https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l
 ```
 .
 ├── README.md
-├── prd
+├── dest
 │   ├── index.html
 │   └── js
 │       └── script.js
@@ -24,5 +24,5 @@ https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l
 The syntax is `pug <source dir> --out <target dir>`, and the `-P` flag means pretty, which makes the output html use indentation and line breaks.
 
 ## Hosted in AWS S3 bucket
-`aws s3 cp --recursive prd/ s3://<bucket-name>`<br>
+`aws s3 cp --recursive dest/ s3://<bucket-name>`<br>
 Note: Only copy the files in `dest/` to S3.
