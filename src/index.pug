@@ -16,19 +16,21 @@ html(lang='en-US')
           div(class='input-group-append')
             span(class='input-group-text') g
       div
-        p Ingredient list
-        div(class='table-responsive')
-          table(class='table')
-            thead
-              tr
-                th Ingredient name
-                th Amount (g)
-            tbody
-              - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }
-              each item, key in ingredientList
-                tr(id=`${key}-row`)
-                  td(id=`${key}-label`)=item
-                  td(id=`${key}-amount`) 
+        div(class='card')
+          div(class="card-body")
+            h3(class='card-title') Ingredient List
+            div(class='table-responsive')
+              table(class='table')
+                thead
+                  tr
+                    th Ingredient name
+                    th Amount (g)
+                tbody
+                  - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }
+                  each item, key in ingredientList
+                    tr(id=`${key}-row`)
+                      td(id=`${key}-label`)=item
+                      td(id=`${key}-amount`)
 
   script(src='scripts/script.js')
 
