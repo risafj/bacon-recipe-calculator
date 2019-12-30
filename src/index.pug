@@ -11,7 +11,6 @@ html(lang='en-US')
         | Meat weight in grams:
       input(id='meat-weight' type='number' min='0' oninput="validity.valid||(value='');")
       | g
-      button(id='submit-form-button' type='button') OK
       p
         | Your ingredient list
       - const ingredientList = { 'salt': 'Kosher salt', 'pepper': 'Coarsely ground black pepper', 'sugar': 'Brown sugar', 'water': 'Distilled water', 'cure': 'Pink curing salt (Prague Powder)' }

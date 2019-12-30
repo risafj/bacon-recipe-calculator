@@ -6,7 +6,11 @@ const ingredientList = {
   cure: 'Pink curing salt (Prague Powder)'
 }
 
-document.getElementById('submit-form-button').addEventListener('click', onButtonClick)
+document.getElementById('meat-weight').addEventListener('keyup', function (keyboardEvent) {
+  if (keyboardEvent.keyCode === 13) { onButtonClick() }
+})
+
+document.getElementById('meat-weight').addEventListener('blur', onButtonClick)
 
 function onButtonClick () {
   const meatWeight = document.getElementById('meat-weight').value
