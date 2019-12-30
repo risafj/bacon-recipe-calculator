@@ -10,3 +10,10 @@ body {
     a {
         color: #616865;
     }
+
+#site-credits {
+    font-size: small;
+}
+    a {
+        color: #212529;
+    }
