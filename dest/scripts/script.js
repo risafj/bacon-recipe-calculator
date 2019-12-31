@@ -44,7 +44,7 @@ function init () {
         ingredientWeight = (meatWeightModifier * 10.5)
         break
       case 'sugar':
-        ingredientWeight = (meatWeightModifier * 75)
+        ingredientWeight = (meatWeightModifier * 37)
         break
       case 'water':
         ingredientWeight = (meatWeightModifier * 177.5)
