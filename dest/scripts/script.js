@@ -19,7 +19,10 @@ function init () {
 
   function onInputCompletion () {
     const meatWeight = meatWeightInput.value
-    if (!meatWeight || Number(meatWeight) === 0) { return }
+    if (!meatWeight || Number(meatWeight) === 0) {
+      clearTable()
+      return
+    }
 
     Object.keys(ingredientList).forEach(ingredientId => {
       displayIngredientWeight(ingredientId, meatWeight)
@@ -58,6 +61,12 @@ function init () {
       }
     }
     return (ingredientWeight.toFixed(1))
+  }
+  function clearTable () {
+    const ids = document.querySelectorAll('[id$=-amount]')
+    ids.forEach(id => {
+      id.textContent = ''
+    })
   }
 }
 init()
