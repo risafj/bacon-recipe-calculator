@@ -13,7 +13,8 @@ https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l
 ├── README.md
 ├── dest
 │   ├── images
-│   │   └── bacon.jpg
+│   │   ├── bacon.jpg
+│   │   └── favicon.png
 │   ├── index.html
 │   ├── scripts
 │   │   └── script.js
