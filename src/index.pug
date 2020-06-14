@@ -14,9 +14,7 @@ html(lang='en-US')
       div(class='img')
         img(src='images/bacon.jpg' class='img-fluid mx-auto d-block rounded' alt='bacon' width='300')
       h1(class='text-center my-4') Bacon Recipe Calculator
-      p(class='mt-4 lead')
-        | This calculator is based on the #[a(href='https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l' target='_blank') homemade bacon recipe] by the Binging with Babish blog. Refer to the link for cooking instructions.
-      div(class='form-inline justify-content-center')
+      div(class='form-inline justify-content-center lead')
         label(for='meat-weight' class='mr-sm-2') Enter the weight of your pork belly:
         div(class='input-group')
           input(id='meat-weight' type='text' placeholder='100+100' class='form-control')
@@ -39,9 +37,9 @@ html(lang='en-US')
                       td(id=`${key}-label`)=item
                       td(id=`${key}-amount`)
       p(class='mt-4')
-        | Caveats
+        | This calculator is for making homemade bacon using the #[a(href='https://www.bingingwithbabish.com/recipes/orangemochafrapp-fpm9l' target='_blank') recipe] by the Binging with Babish blog.
         br
-        | There are two ingredients for which we use a reduce the amount from Babish's recipe: sugar (personal preference - results in a more peppery taste) and curing salt (for safety).
+        | However, we've reduced the amount of sugar (for a more peppery taste) and curing salt (for safety). Cooking instructions can be found from the link.
 
       p(class='mt-4' id='site-credits')
         | Page created by #[a(href='https://dev.to/risafj') Risa Fujii]
