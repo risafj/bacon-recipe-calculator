@@ -18,8 +18,10 @@ function init () {
   meatWeightInput.addEventListener('blur', onInputCompletion)
 
   function onInputCompletion () {
-    const meatWeight = meatWeightInput.value
-    if (!meatWeight || Number(meatWeight) === 0) {
+    const meatWeight = evaluateMath(meatWeightInput.value)
+    meatWeightInput.value = meatWeight
+
+    if (!meatWeight || meatWeight <= 0) {
       clearTable()
       return
     }
@@ -27,6 +29,11 @@ function init () {
     Object.keys(ingredientList).forEach(ingredientId => {
       displayIngredientWeight(ingredientId, meatWeight)
     })
+  }
+
+  function evaluateMath (s) {
+    return (s.replace(/\s/g, '').match(/[+-]?([0-9.]+)/g) || [0])
+      .reduce((sum, value) => parseFloat(sum) + parseFloat(value))
   }
 
   function displayIngredientWeight (ingredientId, meatWeight) {
@@ -62,6 +69,7 @@ function init () {
     }
     return (ingredientWeight.toFixed(1))
   }
+
   function clearTable () {
     const ids = document.querySelectorAll('[id$=-amount]')
     ids.forEach(id => {
